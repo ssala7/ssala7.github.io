@@ -1,1 +1,1 @@
-This repo is used as resume vai github page.
+This repo is used as resume via github pages.
