@@ -3,174 +3,389 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suresh Sala Resume</title>
+    <title>Suresh Sala - Cloud Architect & Security Professional</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-        }
-        h1, h2, h3 {
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
             color: #333;
+            background: #f8f9fa;
         }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .header .title {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .header .contact {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
+        
         .section h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
-        }
-        .contact-info, .skills, .certifications {
+            color: #667eea;
+            font-size: 1.4em;
             margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #667eea;
+            position: relative;
         }
+        
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #764ba2;
+        }
+        
+        .profile {
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #555;
+        }
+        
         .experience-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .experience-item h3 {
+            color: #333;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        
+        .experience-item .period {
+            color: #667eea;
+            font-weight: 600;
             margin-bottom: 15px;
         }
-        .experience-item h3 {
-            margin: 5px 0;
-        }
+        
         .experience-item ul {
-            margin: 5px 0 10px 20px;
+            margin-left: 20px;
         }
-        .skills ul, .certifications ul {
-            margin: 0;
-            padding-left: 20px;
+        
+        .experience-item li {
+            margin-bottom: 8px;
+            color: #555;
         }
-        .skills ul li, .certifications ul li {
-            list-style-type: disc;
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 3px solid #667eea;
+        }
+        
+        .skill-category h4 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            padding: 4px 0;
+            color: #555;
+            font-size: 0.9em;
+        }
+        
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        
+        .award-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #764ba2;
+        }
+        
+        .speaking {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .speaking h3 {
+            margin-bottom: 10px;
+        }
+        
+        .education {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                box-shadow: none;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Suresh Sala</h1>
-        <div class="section">
-            <h2>Profile</h2>
-            <p>Experienced DevOps/SRE leader with 13 years of expertise. Certified AWS and Azure Solutions Architect. Skilled in team management, cloud architecture, and project delivery. Proven track record in optimizing DevOps frameworks, orchestrating cloud networks, and ensuring compliance with industry standards.</p>
+        <div class="header">
+            <h1>Suresh Sala</h1>
+            <div class="title">Cloud Architect & Security Professional</div>
+            <div class="contact">13+ Years Experience | AWS & Azure Certified | Security Specialist</div>
         </div>
 
-        <div class="section">
-            <h2>Experience</h2>
-                <h3>AngelOne, Bengaluru — Staff Engineer - SRE</h3>
-                <p>Sep 2024 - PRESENT</p>
-                <ul>
-                    <li>Leading initiatives in Cloud Security, Cost Optimization, Reliability, and Operational Excellence.</li>
-                    <li>Manage Cloud Infrastructure and Cloud Security.</li>
-                </ul>
+        <div class="content">
+            <div class="section">
+                <h2>Profile</h2>
+                <div class="profile">
+                    Experienced Cloud Architect and Security Professional with 13 years of expertise in cloud infrastructure and security frameworks. Certified AWS and Azure Solutions Architect with proven leadership in team management, cloud architecture, and project delivery. Recognized speaker at AWS Community Day and recipient of Leadership Excellence Award. Expert in implementing security frameworks, cost optimization through JIT solutions, and ensuring compliance with industry standards.
+                </div>
             </div>
-            <div class="experience-item">
-                <h3>Grab, Bengaluru — Engineering Manager - SRE</h3>
-                <p>Oct 2022 - Sep 2024</p>
-                <ul>
-                    <li>Develop and execute project roadmaps, ensuring alignment with organizational goals and timely project delivery.</li>
-                    <li>Oversee deployments, technical governance, runbook development, incident response, and SLA monitoring to maintain operational excellence.</li>
-                    <li>Manage Vault clusters for secrets management and implement robust business continuity and disaster recovery (BCDR) measures.</li>
-                    <li>Ensure compliance with audit and regulatory requirements, maintaining adherence to industry standards.</li>
-                    <li>Lead a team of 5 individuals within the SRE department, conducting regular one-on-one sessions.</li>
-                    <li>Foster a collaborative work environment, providing mentorship and professional development opportunities to team members.</li>
-                    <li>Collaborate with cross-functional teams to align secrets management practices with organizational objectives.</li>
-                    <li>Initiate knowledge-sharing sessions to promote continuous learning and improvement within the team.</li>
-                    <li>Participate in recruitment efforts, contributing to the growth and development of the SRE department.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Grab, Bengaluru — Lead Engineer - SRE</h3>
-                <p>Aug 2017 - Oct 2022</p>
-                <ul>
-                    <li>Implemented established Site Reliability Engineering (SRE) practices and designed a robust DevOps framework.</li>
-                    <li>Orchestrated cloud networks across AWS, Azure, and GCP platforms.</li>
-                    <li>Successfully bootstrapped accounts and optimized cloud infrastructure costs.</li>
-                    <li>Implemented automation for cost management, reducing operational overhead.</li>
-                    <li>Managed infrastructure, logging, monitoring, and deployments across multiple environments on various cloud providers.</li>
-                    <li>Developed and maintained Terraform modules for multiple providers, streamlining infrastructure provisioning.</li>
-                    <li>Authored Terraform modules for creating DataDog dashboards and monitors, enhancing monitoring capabilities.</li>
-                    <li>Established CI pipelines using Azure DevOps for efficient software delivery.</li>
-                    <li>Automated the creation and distribution of multi-architecture Docker images to Elastic Container Registry (ECR).</li>
-                    <li>Strengthened cloud security posture with measures from Tenable, Crowdstrike, and CIS benchmarks.</li>
-                    <li>Utilized Ansible and AWS Image Builder for creating Golden Amazon Machine Images (AMIs).</li>
-                    <li>Implemented automation to rotate Auto Scaling Groups (ASGs) across environments without downtime.</li>
-                    <li>Upgraded Kubernetes clusters (EKS) to ensure optimal performance and security.</li>
-                    <li>Conducted proof-of-concepts (POCs) on ECS with Fargate for evaluating container orchestration solutions.</li>
-                    <li>Created Azure Subscriptions, with proper networking and established connectivity between different cloud providers.</li>
-                    <li>Created GCP Accounts, with proper networking and established connectivity between different cloud providers.</li>
-                    <li>Managed workloads on AKS and GKE platforms for efficient containerized application deployment.</li>
-                    <li>Managed Azure Stack Infrastructure.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>FreeCharge, Bengaluru — Senior DevOps Engineer</h3>
-                <p>Sep 2015 - May 2017</p>
-                <ul>
-                    <li>Automated AWS Infra creation using CloudFormation and managed DR environments.</li>
-                    <li>Implemented security measures using Lambda and automated log archival in S3.</li>
-                    <li>Established a central logging system using the EFK Stack and implemented SIEM tool Splunk.</li>
-                    <li>Worked on PCI DSS Implementation and lead on Security Logging and Monitoring.</li>
-                    <li>Trained NOC team on different AWS services.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Oracle, Bengaluru — DevOps Engineer</h3>
-                <p>Mar 2015 - Sep 2015</p>
-                <ul>
-                    <li>Automated installation of Databases, Middleware, and Applications using Chef.</li>
-                    <li>Automated the installation of Oracle databases and WebLogic configurations.</li>
-                    <li>Automated installation of various applications.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Wipro Technologies, Bengaluru — DevOps Engineer</h3>
-                <p>Mar 2013 - Mar 2015</p>
-                <ul>
-                    <li>Played a key role in the Cloud Practice team, focusing on Cloud implementation and automation.</li>
-                    <li>Experience in building end-to-end cloud platforms in AWS, Azure, and OpenStack.</li>
-                    <li>Worked on OpenStack and other open-source Cloud technologies.</li>
-                    <li>Conducted demos, wrote scripts for automation, and designed and executed test cases for three-tier architecture.</li>
-                </ul>
-            </div>
-        </div>
 
-        <div class="section">
-            <h2>Education</h2>
-            <p>CBIT, Hyderabad — Masters in Engineering (ECE) June 2010 - June 2012</p>
-        </div>
+            <div class="section">
+                <h2>Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <h3>AngelOne, Bengaluru — Staff Engineer - SRE</h3>
+                    <div class="period">Sep 2024 - PRESENT</div>
+                    <ul>
+                        <li>Leading initiatives in Cloud Security, Cost Optimization, Reliability, and Operational Excellence</li>
+                        <li>Manage Cloud Infrastructure and Cloud Security</li>
+                        <li>Significantly improved security posture through implementation of comprehensive security frameworks and best practices</li>
+                        <li>Implemented Just-In-Time (JIT) access solutions, resulting in substantial cost savings and enhanced security controls</li>
+                        <li>Recipient of Leadership Excellence Award for outstanding performance and team leadership</li>
+                    </ul>
+                </div>
 
-        <div class="section skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Cloud Services: AWS, Azure, GCP</li>
-                <li>Networking: Direct Connect, RRAS, VPNs, VPC and Vnet Peerings, Express Route, TGW</li>
-                <li>Containerization & Orchestration: Docker, Kubernetes, AKS, EKS and GKE.</li>
-                <li>Service Mesh: Istio, Consul</li>
-                <li>Infrastructure Management: Terraform, CloudFormation</li>
-                <li>Config & Secrets Management: Consul, Vault</li>
-                <li>Configuration Management: Ansible, Chef</li>
-                <li>Monitoring & Logging: CheckMk, ElasticSearch, FluentD and Kibana Stack, Prometheus, Telegraf, InfluxDB Grafana Stack, Datadog, Splunk</li>
-                <li>CI/CD: Jenkins, GitLab CI, Helm, Azure DevOps</li>
-                <li>Databases: MySQL, PostgreSQL, Redis, Aerospike, Kafka</li>
-                <li>Web Servers: Nginx</li>
-                <li>Security Tools: HIDS (OSSEC, CrowdStrike), Vulnerability Scanning (Nessus)</li>
-                <li>Programming Languages: Python, Bash, Golang</li>
-            </ul>
-        </div>
+                <div class="experience-item">
+                    <h3>Grab, Bengaluru — Engineering Manager - SRE</h3>
+                    <div class="period">Oct 2022 - Sep 2024</div>
+                    <ul>
+                        <li>Develop and execute project roadmaps, ensuring alignment with organizational goals and timely project delivery</li>
+                        <li>Oversee deployments, technical governance, runbook development, incident response, and SLA monitoring</li>
+                        <li>Manage Vault clusters for secrets management and implement robust BCDR measures</li>
+                        <li>Ensure compliance with audit and regulatory requirements, maintaining adherence to industry standards</li>
+                        <li>Lead a team of 5 individuals within the SRE department, conducting regular one-on-one sessions</li>
+                        <li>Foster collaborative work environment, providing mentorship and professional development opportunities</li>
+                    </ul>
+                </div>
 
-        <div class="section certifications">
-            <h2>Certification & Awards</h2>
-            <ul>
-                <li>AWS Certified Security - Specialty</li>
-                <li>AWS Certified Solutions Architect - Professional</li>
-                <li>Microsoft Certified Azure Solutions Architect Expert</li>
-                <li>Hashicorp Certified Terraform Associate</li>
-                <li>Microsoft OpenHack: Security, Compliance, and Identity</li>
-                <li>Customer Excellence Award by Grab</li>
-                <li>Rising Star Award 2015 by Oracle HSGBU</li>
-            </ul>
+                <div class="experience-item">
+                    <h3>Grab, Bengaluru — Lead Engineer - SRE</h3>
+                    <div class="period">Aug 2017 - Oct 2022</div>
+                    <ul>
+                        <li>Implemented established SRE practices and designed robust DevOps framework</li>
+                        <li>Orchestrated cloud networks across AWS, Azure, and GCP platforms</li>
+                        <li>Successfully bootstrapped accounts and optimized cloud infrastructure costs</li>
+                        <li>Strengthened cloud security posture with measures from Tenable, Crowdstrike, and CIS benchmarks</li>
+                        <li>Developed and maintained Terraform modules for multiple providers</li>
+                        <li>Established CI pipelines using Azure DevOps for efficient software delivery</li>
+                        <li>Upgraded Kubernetes clusters (EKS) to ensure optimal performance and security</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>FreeCharge, Bengaluru — Senior DevOps Engineer</h3>
+                    <div class="period">Sep 2015 - May 2017</div>
+                    <ul>
+                        <li>Automated AWS Infrastructure creation using CloudFormation and managed DR environments</li>
+                        <li>Implemented security measures using Lambda and automated log archival in S3</li>
+                        <li>Established central logging system using EFK Stack and implemented SIEM tool Splunk</li>
+                        <li>Worked on PCI DSS Implementation and lead on Security Logging and Monitoring</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Oracle, Bengaluru — DevOps Engineer</h3>
+                    <div class="period">Mar 2015 - Sep 2015</div>
+                    <ul>
+                        <li>Automated installation of Databases, Middleware, and Applications using Chef</li>
+                        <li>Automated Oracle databases and WebLogic configurations</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Wipro Technologies, Bengaluru — DevOps Engineer</h3>
+                    <div class="period">Mar 2013 - Mar 2015</div>
+                    <ul>
+                        <li>Key role in Cloud Practice team, focusing on Cloud implementation and automation</li>
+                        <li>Built end-to-end cloud platforms in AWS, Azure, and OpenStack</li>
+                        <li>Designed and executed test cases for three-tier architecture</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Cloud Platforms</h4>
+                        <ul>
+                            <li>AWS (Expert)</li>
+                            <li>Microsoft Azure</li>
+                            <li>Google Cloud Platform</li>
+                            <li>OpenStack</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Security & Compliance</h4>
+                        <ul>
+                            <li>Cloud Security Frameworks</li>
+                            <li>PCI DSS Implementation</li>
+                            <li>CIS Benchmarks</li>
+                            <li>SIEM (Splunk)</li>
+                            <li>Vulnerability Scanning</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Infrastructure & Automation</h4>
+                        <ul>
+                            <li>Terraform</li>
+                            <li>CloudFormation</li>
+                            <li>Ansible</li>
+                            <li>Chef</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Containers & Orchestration</h4>
+                        <ul>
+                            <li>Kubernetes (EKS, AKS, GKE)</li>
+                            <li>Docker</li>
+                            <li>Istio Service Mesh</li>
+                            <li>Helm</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Monitoring & Observability</h4>
+                        <ul>
+                            <li>DataDog</li>
+                            <li>Prometheus & Grafana</li>
+                            <li>ELK Stack</li>
+                            <li>Splunk</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Programming</h4>
+                        <ul>
+                            <li>Python</li>
+                            <li>Golang</li>
+                            <li>Bash Scripting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Speaking Engagements</h2>
+                <div class="speaking">
+                    <h3>AWS Community Day Speaker</h3>
+                    <p>Cloud Security and Architecture Best Practices</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Certifications & Awards</h2>
+                <div class="awards-grid">
+                    <div class="award-item">
+                        <strong>AWS Certified Security - Specialty</strong>
+                    </div>
+                    <div class="award-item">
+                        <strong>AWS Certified Solutions Architect - Professional</strong>
+                    </div>
+                    <div class="award-item">
+                        <strong>Microsoft Certified Azure Solutions Architect Expert</strong>
+                    </div>
+                    <div class="award-item">
+                        <strong>HashiCorp Certified Terraform Associate</strong>
+                    </div>
+                    <div class="award-item">
+                        <strong>Leadership Excellence Award - AngelOne (2024)</strong>
+                    </div>
+                    <div class="award-item">
+                        <strong>Customer Excellence Award - Grab</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                <div class="education">
+                    <strong>Masters in Engineering (ECE)</strong><br>
+                    CBIT, Hyderabad | June 2010 - June 2012
+                </div>
+            </div>
         </div>
     </div>
 </body>
 </html>
-
